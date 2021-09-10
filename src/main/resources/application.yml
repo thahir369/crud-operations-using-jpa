@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: crud-h2Db-demo-hbk   #it is used by spring cloud project like eureka
+  h2:
+    console:
+      enabled: true   #H2-InMemory DB-console --> http://localhost:8080/h2-console (default) here i named as http://localhost:8080/h2
+      path: /h2
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create-drop
+  datasource:
+    url: jdbc:h2:mem:testdb   # here testdb is name of database which is default
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+
+
+
+
+
