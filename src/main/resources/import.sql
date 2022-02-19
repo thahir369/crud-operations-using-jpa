@@ -4,4 +4,4 @@ insert into topics_list(topic_name,description) values ('java','programming lang
 
 insert into topics_list(topic_name,description) values ('python','programming language')
 
-insert into topics_list(topic_name,description) values ('sql','squery language')
+insert into topics_list(topic_name,description) values ('sql','query language')

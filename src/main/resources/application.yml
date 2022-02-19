@@ -6,7 +6,7 @@ spring:
     name: crud-h2Db-demo-hbk   #it is used by spring cloud project like eureka
   h2:
     console:
-      enabled: true   #H2-InMemory DB-console --> http://localhost:8080/h2-console (default) here i named as http://localhost:8080/h2
+      enabled: true   #H2-InMemory DB-console --> http://localhost:8080/h2-console (default) here I named as http://localhost:8080/h2
       path: /h2
   jpa:
     show-sql: true

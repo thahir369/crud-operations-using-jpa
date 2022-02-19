@@ -1,5 +1,6 @@
 package com.helloWorld.service;
 
+import com.helloWorld.dto.TopicDto;
 import com.helloWorld.exception.ResourceNotFoundException;
 import com.helloWorld.model.Topic;
 import com.helloWorld.repository.TopicRepository;
@@ -16,9 +17,8 @@ public class TopicService {
 
   @Autowired private final TopicRepository topicRepository;
 
-  List<Topic> topics;
-
   public List<Topic> fetchAllTopics() {
+    List<Topic> topics;
     topics = topicRepository.findAll();
     if (topics.isEmpty()) {
       throw new ResourceNotFoundException("no topics are found");
@@ -43,17 +43,27 @@ public class TopicService {
     }
   }
 
-  public void addTopic(Topic topic) {
-    topicRepository.save(topic);
+  public void addTopic(TopicDto topicDto) {
+    topicRepository.save(this.topicDtoToTopic(topicDto));
   }
 
-  public void updateTopic(int id, Topic topic) {
-    if (topicRepository.findById(id).isEmpty())
+  public void updateTopic(int id, TopicDto topicDto) {
+    if (topicRepository.findById(id).isEmpty()) {
       throw new ResourceNotFoundException("topic with id " + id + " is not found");
-    else topicRepository.save(topic);
+    } else {
+      topicRepository.save(this.topicDtoToTopic(topicDto));
+    }
   }
 
   public void deleteTopic(int id) {
     topicRepository.deleteById(id);
+  }
+
+  private Topic topicDtoToTopic(TopicDto topicDto) {
+    return Topic.builder()
+        .id(topicDto.getId())
+        .name(topicDto.getName())
+        .description(topicDto.getDescription())
+        .build();
   }
 }

@@ -1,19 +1,13 @@
 package com.helloWorld.controller;
 
+import com.helloWorld.dto.TopicDto;
 import com.helloWorld.model.Topic;
 import com.helloWorld.service.TopicService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
@@ -50,14 +44,14 @@ public class TopicController {
 
   @PostMapping("/topics")
   @ResponseStatus(HttpStatus.CREATED)
-  public String addTopic(@RequestBody Topic topic) {
-    topicService.addTopic(topic);
-    return ("topic with name:" + topic.getName() + " is added successfully!");
+  public String addTopic(@RequestBody TopicDto topicDto) {
+    topicService.addTopic(topicDto);
+    return ("topic with name:" + topicDto.getName() + " is added successfully!");
   }
 
   @PutMapping("topics/{id}")
-  public String updateTopic(@RequestBody Topic topic, @PathVariable int id) {
-    topicService.updateTopic(id, topic);
+  public String updateTopic(@RequestBody TopicDto topicDto, @PathVariable int id) {
+    topicService.updateTopic(id, topicDto);
     return ("topic with id:" + id + " is updated successfully!");
   }
 

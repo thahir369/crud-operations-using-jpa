@@ -19,7 +19,7 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(SpringExtension.class)
-class TopicServiceTest {
+class TopicDtoServiceTest {
 
   @Mock TopicRepository topicRepository;
 
@@ -44,7 +44,7 @@ class TopicServiceTest {
     topicList.add(new Topic(3, "python", "data science"));
     when(topicRepository.findAll()).thenThrow(ResourceNotFoundException.class);
 
-    assertThrows(ResourceNotFoundException.class,()->topicService.fetchAllTopics());
+    assertThrows(ResourceNotFoundException.class, () -> topicService.fetchAllTopics());
   }
 
   @Test
