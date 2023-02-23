@@ -1,6 +1,6 @@
-package com.helloWorld.repository;
+package com.halloWorld.repository;
 
-import com.helloWorld.model.Topic;
+import com.halloWorld.entity.Topic;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

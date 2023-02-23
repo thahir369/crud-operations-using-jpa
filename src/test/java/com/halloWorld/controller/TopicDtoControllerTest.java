@@ -1,8 +1,8 @@
-package com.helloWorld.controller;
+package com.halloWorld.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.helloWorld.model.Topic;
-import com.helloWorld.service.TopicService;
+import com.halloWorld.entity.Topic;
+import com.halloWorld.service.TopicService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

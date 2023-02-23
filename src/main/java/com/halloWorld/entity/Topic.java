@@ -1,4 +1,4 @@
-package com.helloWorld.model;
+package com.halloWorld.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

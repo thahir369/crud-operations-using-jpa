@@ -1,8 +1,8 @@
-package com.helloWorld.service;
+package com.halloWorld.service;
 
-import com.helloWorld.exception.ResourceNotFoundException;
-import com.helloWorld.model.Topic;
-import com.helloWorld.repository.TopicRepository;
+import com.halloWorld.exception.ResourceNotFoundException;
+import com.halloWorld.entity.Topic;
+import com.halloWorld.repository.TopicRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

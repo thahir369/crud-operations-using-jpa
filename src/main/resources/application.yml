@@ -3,11 +3,11 @@ server:
 
 spring:
   application:
-    name: crud-h2Db-demo-hbk   #it is used by spring cloud project like eureka
+    name: crud-operations-using-jpa   #it is used by spring cloud project like eureka
   h2:
     console:
-      enabled: true   #H2-InMemory DB-console --> http://localhost:8080/h2-console (default) here I named as http://localhost:8080/h2
-      path: /h2
+      enabled: true   #H2-InMemory DB-console --> http://localhost:8080/h2-console (default path)
+      path: /h2-console
   jpa:
     show-sql: true
     hibernate:

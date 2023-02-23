@@ -1,6 +1,6 @@
-package com.helloWorld.repository;
+package com.halloWorld.repository;
 
-import com.helloWorld.model.Topic;
+import com.halloWorld.entity.Topic;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

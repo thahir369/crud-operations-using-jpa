@@ -1,10 +1,9 @@
-package com.helloWorld.controller;
+package com.halloWorld.controller;
 
-import com.helloWorld.dto.TopicDto;
-import com.helloWorld.model.Topic;
-import com.helloWorld.service.TopicService;
+import com.halloWorld.dto.TopicDto;
+import com.halloWorld.entity.Topic;
+import com.halloWorld.service.TopicService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +16,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class TopicController {
 
-  @Autowired private final TopicService topicService;
+  private final TopicService topicService;
 
   @GetMapping("/home")
   public String homepage() {

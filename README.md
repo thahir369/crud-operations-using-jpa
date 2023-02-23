@@ -1,4 +1,4 @@
-# crud-h2Db-demo-hbk
+# crud-operations-using-jpa
 
 
 ### command to create an encrypted values with secrete-key: hbk
