@@ -15,12 +15,8 @@ spring:
   datasource:
     url: jdbc:h2:mem:testdb   # here testdb is name of database which is default
     driver-class-name: org.h2.Driver
-    username: ENC(jIYy9vNOn/pB7kegCKfmpQP66J2xCJPnFVJuz9uWHENBTxmjhmRBD61lMapnUPVY)   # encrypted username (sa)
-    password: ENC(GQA+F5Nf8hcsZT2Y2nnVydYtrA2mTdh9wdm3FkDA5lkmk6ba55r1dOLqiEoXUHyf)   # encrypted password (rootuser)
-
-jasypt:
-  encryptor:
-    password: hbk   # secrete key for encryption and decryption. this is default property
+    username: sa
+    password:
 
 springdoc:
   api-docs:

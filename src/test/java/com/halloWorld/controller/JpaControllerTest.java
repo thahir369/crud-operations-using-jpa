@@ -2,6 +2,7 @@ package com.halloWorld.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.halloWorld.entity.Topic;
+import com.halloWorld.service.OrderService;
 import com.halloWorld.service.TopicService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -27,12 +28,13 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@WebMvcTest(controllers = TopicController.class)
+@WebMvcTest(controllers = JpaController.class)
 @ExtendWith(SpringExtension.class)
-class TopicDtoControllerTest {
+class JpaControllerTest {
 
   @Autowired MockMvc mockMvc;
   @MockBean TopicService topicService;
+  @MockBean OrderService orderService;
   @Autowired ObjectMapper objectMapper;
 
   @Test

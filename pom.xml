@@ -9,7 +9,7 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>com.helloWorld</groupId>
+  <groupId>com.halloWorld</groupId>
   <artifactId>crud-operations-using-jpa</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>crud-operations-using-jpa</name>

@@ -1,7 +1,10 @@
 package com.halloWorld.controller;
 
 import com.halloWorld.dto.TopicDto;
+import com.halloWorld.entity.Order;
 import com.halloWorld.entity.Topic;
+import com.halloWorld.repository.OrderRepository;
+import com.halloWorld.service.OrderService;
 import com.halloWorld.service.TopicService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -14,9 +17,39 @@ import java.util.Optional;
 @Validated
 @RestController
 @RequiredArgsConstructor
-public class TopicController {
+public class JpaController {
 
   private final TopicService topicService;
+  private final OrderService orderService;
+
+  @PostMapping("/orders")
+  public void order(@RequestBody Order order) {
+    orderService.addOrder(order);
+  }
+
+  @GetMapping("/orders")
+  @ResponseStatus(HttpStatus.OK)
+  public List<Order> getAllOrders() {
+    return orderService.fetchAllOrders();
+  }
+
+  @GetMapping("/orders/{id}")
+  @ResponseStatus(HttpStatus.OK)
+  public Optional<Order> getOrderById(@PathVariable String id) {
+    return orderService.fetchOrderById(id);
+  }
+
+  @PutMapping("orders/{id}")
+  public String updateOrder(@RequestBody Order order, @PathVariable String id) {
+    orderService.updateOrder(id, order);
+    return ("order with id:" + id + " is updated successfully!");
+  }
+
+  @DeleteMapping("/orders/{id}")
+  public String deleteOrder(@PathVariable String id) {
+    orderService.deleteOrder(id);
+    return ("order with id:" + id + " is deleted successfully!");
+  }
 
   @GetMapping("/home")
   public String homepage() {

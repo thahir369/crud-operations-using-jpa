@@ -1,6 +1,6 @@
 # crud-operations-using-jpa
 
 
-### command to create an encrypted values with secrete-key: hbk
-1. mvn jasypt:encrypt-value "-Djasypt.encryptor.password=hbk" "-Djasypt.plugin.value=rootuser"
-2. this is one time process to create encrypted values and adding in application.yml file
+
+1. Topic entity is used to perform simple CRUD operations
+2. Order, Item entities are used to perform one to many relation CRUD operations
