@@ -1,4 +1,4 @@
-package com.halloWorld;
+package com.helloWorld;
 
 import com.ulisesbocchio.jasyptspringboot.annotation.EnableEncryptableProperties;
 import org.springframework.boot.SpringApplication;

@@ -1,9 +1,9 @@
-package com.halloWorld.service;
+package com.helloWorld.service;
 
-import com.halloWorld.dto.TopicDto;
-import com.halloWorld.exception.ResourceNotFoundException;
-import com.halloWorld.entity.Topic;
-import com.halloWorld.repository.TopicRepository;
+import com.helloWorld.dto.TopicDto;
+import com.helloWorld.exception.ResourceNotFoundException;
+import com.helloWorld.entity.Topic;
+import com.helloWorld.repository.TopicRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

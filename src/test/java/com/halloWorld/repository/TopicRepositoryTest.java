@@ -1,6 +1,7 @@
 package com.halloWorld.repository;
 
-import com.halloWorld.entity.Topic;
+import com.helloWorld.entity.Topic;
+import com.helloWorld.repository.TopicRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 @DataJpaTest
 class TopicRepositoryTest {
 
-  @Autowired TopicRepository topicRepository;
+  @Autowired
+  TopicRepository topicRepository;
 
   @Test
   void testFindAll() {

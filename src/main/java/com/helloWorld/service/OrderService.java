@@ -1,8 +1,8 @@
-package com.halloWorld.service;
+package com.helloWorld.service;
 
-import com.halloWorld.entity.Order;
-import com.halloWorld.exception.ResourceNotFoundException;
-import com.halloWorld.repository.OrderRepository;
+import com.helloWorld.entity.Order;
+import com.helloWorld.exception.ResourceNotFoundException;
+import com.helloWorld.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;

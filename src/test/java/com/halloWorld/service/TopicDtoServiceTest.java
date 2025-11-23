@@ -1,8 +1,9 @@
 package com.halloWorld.service;
 
-import com.halloWorld.exception.ResourceNotFoundException;
-import com.halloWorld.entity.Topic;
-import com.halloWorld.repository.TopicRepository;
+import com.helloWorld.exception.ResourceNotFoundException;
+import com.helloWorld.entity.Topic;
+import com.helloWorld.repository.TopicRepository;
+import com.helloWorld.service.TopicService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -23,7 +24,8 @@ class TopicDtoServiceTest {
 
   @Mock TopicRepository topicRepository;
 
-  @InjectMocks TopicService topicService;
+  @InjectMocks
+  TopicService topicService;
 
   @Test
   void fetchAllTopicsTest() {

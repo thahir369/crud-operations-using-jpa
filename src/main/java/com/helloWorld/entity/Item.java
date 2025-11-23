@@ -1,14 +1,17 @@
-package com.halloWorld.entity;
+package com.helloWorld.entity;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.*;
 
 @Entity
-@Table(name = "item")
+//@Table(name = "item")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

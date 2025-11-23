@@ -1,4 +1,4 @@
-package com.halloWorld.exception;
+package com.helloWorld.exception;
 
 import org.springframework.web.bind.annotation.ResponseStatus;
 

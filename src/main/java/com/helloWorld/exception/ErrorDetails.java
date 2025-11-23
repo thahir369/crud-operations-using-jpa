@@ -1,4 +1,4 @@
-package com.halloWorld.exception;
+package com.helloWorld.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

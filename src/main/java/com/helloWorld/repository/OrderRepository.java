@@ -1,6 +1,6 @@
-package com.halloWorld.repository;
+package com.helloWorld.repository;
 
-import com.halloWorld.entity.Order;
+import com.helloWorld.entity.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

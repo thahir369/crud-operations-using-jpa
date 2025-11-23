@@ -1,4 +1,4 @@
-package com.halloWorld.exception;
+package com.helloWorld.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
