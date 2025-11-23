@@ -1,11 +1,10 @@
 package com.helloWorld.service;
 
 import com.helloWorld.dto.TopicDto;
-import com.helloWorld.exception.ResourceNotFoundException;
 import com.helloWorld.entity.Topic;
+import com.helloWorld.exception.ResourceNotFoundException;
 import com.helloWorld.repository.TopicRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,7 +14,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class TopicService {
 
-  @Autowired private final TopicRepository topicRepository;
+  private final TopicRepository topicRepository;
 
   public List<Topic> fetchAllTopics() {
     List<Topic> topics;

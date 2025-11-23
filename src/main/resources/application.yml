@@ -20,6 +20,6 @@ spring:
 
 springdoc:
   api-docs:
-    path: /v3/api-docs      # this is default url, we can customize if we want
+    path: /v3/api-docs # this is default url, we can customize if we want
   swagger-ui:
-    path: /swagger-ui.html  # this is default url, we can customize if we want
+    path: /index.html  # this is default url, we can customize if we want
